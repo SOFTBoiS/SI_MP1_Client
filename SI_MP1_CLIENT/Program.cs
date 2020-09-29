@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace SoftSearchImages
+namespace SI_MP1_SOAP_CLIENT
 {
     public class Program
     {

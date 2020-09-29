@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Text;
-using SoftSearchImages.Models;
+using SI_MP1_SOAP_CLIENT.Models;
 
-namespace SoftSearchImages
+namespace SI_MP1_SOAP_CLIENT
 {
     public class HttpHelper
     {

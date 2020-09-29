@@ -9,9 +9,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SoftSearchImages.Data;
+using SI_MP1_SOAP_CLIENT.Data;
 
-namespace SoftSearchImages
+namespace SI_MP1_SOAP_CLIENT
 {
     public class Startup
     {

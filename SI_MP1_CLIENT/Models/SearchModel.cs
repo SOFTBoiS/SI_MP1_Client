@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using ServiceReference1;
 
-namespace SoftSearchImages.Models
+namespace SI_MP1_SOAP_CLIENT.Models
 {
     public class SearchModel
     {

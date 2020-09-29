@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ServiceReference1;
 
-namespace SoftSearchImages.Utils
+namespace SI_MP1_SOAP_CLIENT.Utils
 {
     public class SoapClient
     {

@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SoftSearchImages.Data
+namespace SI_MP1_SOAP_CLIENT.Data
 {
     public class WeatherForecastService
     {

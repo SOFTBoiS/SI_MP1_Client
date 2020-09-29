@@ -1,6 +1,6 @@
 using System;
 
-namespace SoftSearchImages.Data
+namespace SI_MP1_SOAP_CLIENT.Data
 {
     public class WeatherForecast
     {
