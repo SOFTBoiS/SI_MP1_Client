@@ -1,0 +1,42 @@
+﻿@page "/history"
+@using SoftSearchImages.Models
+@using System.Diagnostics
+@using Newtonsoft.Json
+
+
+<h1>Searchistory of @SearchModel.SavedName</h1>
+@if (searches?.Length > 0)
+{
+    @foreach (var imageModel in searches)
+    {
+        <img src="@imageModel.url" width="250" height="250" />
+    }
+}
+
+
+
+
+
+@code {
+
+    ImageModel[] searches;
+    private void RequestHistory()
+    {
+        Debug.WriteLine("before res");
+
+        var res = HttpHelper.GetSearchHistory();
+        Debug.WriteLine(res);
+        searches = JsonConvert.DeserializeObject<ImageModel[]>(res);
+        Debug.WriteLine("Foreach");
+        foreach (var imageModel in searches)
+        {
+            Debug.WriteLine(imageModel.url);
+        }
+    }
+    
+    protected override void OnInitialized()
+    {
+        RequestHistory();
+    }
+
+}

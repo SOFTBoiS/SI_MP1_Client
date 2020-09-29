@@ -1,0 +1,60 @@
+﻿@page "/"
+@using SoftSearchImages.Models
+@using SoftSearchImages.Utils
+@using ServiceReference1
+
+<h1>Welcome to Soft Search Images!</h1>
+
+<EditForm Model="@searchModel" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <InputText id="name" placeholder="Your name" @bind-Value="searchModel.Name" />
+    <InputText id="searchValue" placeholder="What do you want to search for?" @bind-Value="searchModel.SearchValue" />
+    <button type="submit">Search</button>
+</EditForm>
+@if (!string.IsNullOrEmpty(errorMsg))
+{
+    @errorMsg
+}
+@if (_loading)
+{
+    <p>Loading... please wait</p>
+}
+else if (images?.Length > 0)
+{
+    @foreach (var image in images)
+    {
+        <img src="@image.url" width="250" height="250" />
+    }
+}
+
+@code
+{
+    private SearchModel searchModel = new SearchModel();
+    private bool _loading;
+    private string errorMsg = "";
+    private void HandleValidSubmit()
+    {
+        errorMsg = "";
+        _loading = true;
+        images = SoapClient.Client.GetPictures(searchModel.SearchValue);
+        _loading = false;
+        if (images?.Length == 0)
+        {
+            errorMsg = "No images found, sorry!";
+            return;
+        }
+        SearchModel.SavedName = searchModel.Name;
+        // TODO: Submit SOAP and REST requests
+        HttpHelper client = new HttpHelper();
+        client.SaveSearch(images[0].url);
+    }
+
+
+    PictureDTO[] images;
+
+    private void HandleInvalidSubmit()
+    {
+    }
+
+}
