@@ -4,7 +4,7 @@
 
 Adam Saidane - cph-as410@cphbusiness.dk  
 Emil Valbak Hermansen - email  
-Sebastian Lundsgaard Larsen - email
+Sebastian Lundsgaard Larsen - cph-sl281@cphbusiness.dk  
 
 ## About
 
