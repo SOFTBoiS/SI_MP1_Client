@@ -3,7 +3,7 @@
 ## Authors
 
 Adam Saidane - cph-as410@cphbusiness.dk  
-Emil Valbak Hermansen - email  
+Emil Valbak Hermansen - cph-eh108@cphbusiness.dk  
 Sebastian Lundsgaard Larsen - cph-sl281@cphbusiness.dk  
 
 ## About
